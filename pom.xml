@@ -12,5 +12,7 @@
         <module>Spring_context_xml</module>
         <module>Spring_context_configuration</module>
         <module>Spring_boot_demo</module>
+        <module>Spring_adv_config</module>
+        <module>Spring_adv_config/beans-lifecycle-exercise</module>
     </modules>
 </project>
