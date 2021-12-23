@@ -10,6 +10,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Import;
 
 import java.util.Map;
 
@@ -19,18 +20,19 @@ import static org.assertj.core.api.Assertions.assertThat;
 @SpringBootTest
 public class NestedConfigurationDemoTest {
 
+    @Import({Dog.class, Cat.class})
 //    @ComponentScan("com.ratnikov.testconfigurationexercise1.family.pets")
     @Configuration
     static class NestedConfiguration {
-        @Bean
-        FamilyMember dog() {
-            return new Dog();
-        }
-
-        @Bean
-        FamilyMember cat() {
-            return new Cat();
-        }
+//        @Bean
+//        FamilyMember dog() {
+//            return new Dog();
+//        }
+//
+//        @Bean
+//        FamilyMember cat() {
+//            return new Cat();
+//        }
     }
 
     @Autowired
