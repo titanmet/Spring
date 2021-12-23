@@ -1,6 +1,6 @@
-package com.ratnikov.testconfigurationexercise1.family.childrents;
+package com.ratnikov.testconfigurationexercise2.family.childrens;
 
-import com.ratnikov.testconfigurationexercise1.family.FamilyMember;
+import com.ratnikov.testconfigurationexercise2.family.FamilyMember;
 import org.springframework.stereotype.Component;
 
 @Component

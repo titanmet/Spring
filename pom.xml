@@ -16,5 +16,6 @@
         <module>Spring_adv_config/beans-lifecycle-exercise</module>
         <module>Spring_adv_config/conditional-and-profiles-exercise</module>
         <module>Spring_adv_config/test-configuration-exercise-1</module>
+        <module>Spring_adv_config/test-configuration-exercise-2</module>
     </modules>
 </project>
