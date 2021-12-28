@@ -20,5 +20,9 @@
         <module>application-events-shell-demo</module>
         <module>Spring_jdbc</module>
         <module>Spring_jdbc/jdbc-demo-exercise</module>
+        <module>Spring_orm</module>
+        <module>Demo_projects</module>
+        <module>Spring_orm/Demo_projects/spring-jdbc-demo</module>
+        <module>Spring_orm/Demo_projects/mybatis-demo</module>
     </modules>
 </project>
