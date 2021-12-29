@@ -36,7 +36,7 @@ public class StudentRepositoryJpaImpl implements StudentRepositoryJpa {
     @Override
     public List<Student> findAll() {
         EntityGraph<?> entityGraph = entityManager.getEntityGraph("student-avatar-entity-graphs");
-        TypedQuery<Student> query = entityManager.createQuery("select s from Student s", Student.class);
+        TypedQuery<Student> query = entityManager.createQuery("select s from Student s join fetch s.emails", Student.class);
         query.setHint("javax.persistence.fetchgraph",entityGraph);
         return query.getResultList();
     }
