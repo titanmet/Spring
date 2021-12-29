@@ -55,7 +55,6 @@ class StudentRepositoryJpaImplTest {
                 .unwrap(SessionFactory.class);
         sessionFactory.getStatistics().setStatisticsEnabled(true);
 
-
         System.out.println("\n\n\n\n----------------------------------------------------------------------------------------------------------");
         val students = repositoryJpa.findAll();
         assertThat(students).isNotNull().hasSize(EXPECTED_NUMBER_OF_STUDENTS)
