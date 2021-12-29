@@ -6,6 +6,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.persistence.TypedQuery;
 import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
@@ -29,17 +30,21 @@ public class StudentRepositoryJpaImpl implements StudentRepositoryJpa {
 
     @Override
     public Optional<Student> findById(long id) {
-        return Optional.ofNullable(entityManager.find(Student.class,id));
+        Optional<Student> student = Optional.ofNullable(entityManager.find(Student.class, id));
+        student.orElse(new Student());
+        return student;
     }
 
     @Override
     public List<Student> findAll() {
-        return Collections.emptyList();
+        return entityManager.createQuery("select s from Student s", Student.class).getResultList();
     }
 
     @Override
     public List<Student> findByName(String name) {
-        return Collections.emptyList();
+        TypedQuery<Student> query = entityManager.createQuery("select s from Student s where s.name = :name", Student.class);
+        query.setParameter("name", name);
+        return query.getResultList();
     }
 
     @Override
