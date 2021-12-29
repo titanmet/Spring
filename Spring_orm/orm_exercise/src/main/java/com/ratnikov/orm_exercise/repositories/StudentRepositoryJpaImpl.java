@@ -4,10 +4,7 @@ import com.ratnikov.orm_exercise.model.Student;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
-import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
-import javax.persistence.Query;
-import javax.persistence.TypedQuery;
+import javax.persistence.*;
 import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
@@ -38,7 +35,10 @@ public class StudentRepositoryJpaImpl implements StudentRepositoryJpa {
 
     @Override
     public List<Student> findAll() {
-        return entityManager.createQuery("select s from Student s", Student.class).getResultList();
+        EntityGraph<?> entityGraph = entityManager.getEntityGraph("student-avatar-entity-graphs");
+        TypedQuery<Student> query = entityManager.createQuery("select s from Student s", Student.class);
+        query.setHint("javax.persistence.fetchgraph",entityGraph);
+        return query.getResultList();
     }
 
     @Override
