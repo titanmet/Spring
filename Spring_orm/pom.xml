@@ -13,6 +13,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>orm_exercise</module>
+        <module>mybatis-mysql-demo</module>
     </modules>
 
 
