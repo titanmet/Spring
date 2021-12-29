@@ -6,6 +6,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
 import javax.persistence.TypedQuery;
 import java.util.Collections;
 import java.util.List;
@@ -49,11 +50,16 @@ public class StudentRepositoryJpaImpl implements StudentRepositoryJpa {
 
     @Override
     public void updateNameById(long id, String name) {
-
+        Query query = entityManager.createQuery("update Student s set s.name = :name where s.id = :id");
+        query.setParameter("name", name);
+        query.setParameter("id", id);
+        query.executeUpdate();
     }
 
     @Override
     public void deleteById(long id) {
-
+        Query query = entityManager.createQuery("delete from Student s where s.id = :id");
+        query.setParameter("id", id);
+        query.executeUpdate();
     }
 }
