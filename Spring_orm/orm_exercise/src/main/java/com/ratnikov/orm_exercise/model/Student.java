@@ -3,6 +3,7 @@ package com.ratnikov.orm_exercise.model;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.BatchSize;
 import org.hibernate.annotations.Fetch;
 import org.hibernate.annotations.FetchMode;
 
@@ -32,7 +33,8 @@ public class Student {
     @JoinColumn(name = "student_id", foreignKey = @ForeignKey(name = "FK_student"))
     private List<EMail> emails;
 
-    @Fetch(FetchMode.SUBSELECT)
+    //    @Fetch(FetchMode.SUBSELECT)
+    @BatchSize(size = 5)
     @ManyToMany(targetEntity = Course.class, fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JoinTable(name = "student_courses", joinColumns = @JoinColumn(name = "student_id"),
             inverseJoinColumns = @JoinColumn(name = "course_id"))
