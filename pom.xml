@@ -24,5 +24,8 @@
         <module>Demo_projects</module>
         <module>Spring_orm/Demo_projects/spring-jdbc-demo</module>
         <module>Spring_orm/Demo_projects/mybatis-demo</module>
+        <module>Spring_data</module>
+        <module>spring_datajpa</module>
+        <module>spring_data_jpa</module>
     </modules>
 </project>
