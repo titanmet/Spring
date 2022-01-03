@@ -28,5 +28,6 @@
         <module>spring_datajpa</module>
         <module>spring_data_jpa</module>
         <module>spring_data_keyvalue</module>
+        <module>spring_data_mongo</module>
     </modules>
 </project>

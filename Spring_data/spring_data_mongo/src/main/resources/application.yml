@@ -1,0 +1,12 @@
+spring:
+  data:
+    mongodb:
+      database: company
+      port: 27017
+      host: localhost
+
+mongock:
+  runner-type: "ApplicationRunner" # default
+  #runner-type: "InitializingBean"
+  change-logs-scan-package:
+    - com.ratnikov.spring_data_mongo.mongock.changelog
