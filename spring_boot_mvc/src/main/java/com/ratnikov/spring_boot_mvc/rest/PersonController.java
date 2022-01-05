@@ -49,9 +49,9 @@ public class PersonController {
         personRepository.save(person);
     }
 
-    @ExceptionHandler(NotFoundException.class)
-    public ResponseEntity<String> handleNotFound(NotFoundException ex) {
-        return ResponseEntity.badRequest().body("Not found");
-    }
+//    @ExceptionHandler(NotFoundException.class)
+//    public ResponseEntity<String> handleNotFound(NotFoundException ex) {
+//        return ResponseEntity.badRequest().body("Not found");
+//    }
 
 }
