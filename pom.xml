@@ -30,5 +30,6 @@
         <module>spring_data_keyvalue</module>
         <module>spring_data_mongo</module>
         <module>spring_boot_mvc</module>
+        <module>spring_boot_mvc_view</module>
     </modules>
 </project>
