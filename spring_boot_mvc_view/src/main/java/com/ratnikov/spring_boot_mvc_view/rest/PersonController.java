@@ -39,6 +39,6 @@ public class PersonController {
     public String savePerson(Person person, Model model) {
         Person saved = personRepository.save(person);
         model.addAttribute(saved);
-        return "edit";
+        return "redirect:/";
     }
 }
