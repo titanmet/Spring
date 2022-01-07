@@ -17,20 +17,15 @@
         <module>Spring_adv_config/conditional-and-profiles-exercise</module>
         <module>Spring_adv_config/test-configuration-exercise-1</module>
         <module>Spring_adv_config/test-configuration-exercise-2</module>
-        <module>application-events-shell-demo</module>
         <module>Spring_jdbc</module>
         <module>Spring_jdbc/jdbc-demo-exercise</module>
         <module>Spring_orm</module>
-        <module>Demo_projects</module>
         <module>Spring_orm/Demo_projects/spring-jdbc-demo</module>
         <module>Spring_orm/Demo_projects/mybatis-demo</module>
         <module>Spring_data</module>
-        <module>spring_datajpa</module>
-        <module>spring_data_jpa</module>
-        <module>spring_data_keyvalue</module>
-        <module>spring_data_mongo</module>
         <module>spring_boot_mvc</module>
         <module>spring_boot_mvc_view</module>
         <module>spring_boot_web_flow</module>
+        <module>spring-boot-and-react</module>
     </modules>
 </project>
