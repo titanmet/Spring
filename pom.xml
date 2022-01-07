@@ -31,5 +31,6 @@
         <module>spring_data_mongo</module>
         <module>spring_boot_mvc</module>
         <module>spring_boot_mvc_view</module>
+        <module>spring_boot_web_flow</module>
     </modules>
 </project>
