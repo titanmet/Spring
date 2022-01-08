@@ -27,5 +27,6 @@
         <module>spring_boot_mvc_view</module>
         <module>spring_boot_web_flow</module>
         <module>spring-boot-and-react</module>
+        <module>reactive_spring_data</module>
     </modules>
 </project>
