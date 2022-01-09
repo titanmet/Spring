@@ -7,6 +7,7 @@ import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 import java.time.Duration;
+import java.util.List;
 
 @RestController
 public class AnnotatedController {
@@ -18,6 +19,11 @@ public class AnnotatedController {
     @GetMapping("/flux/ten")
     public Flux<Integer> list() {
         return Flux.range(1, 10);
+    }
+
+    @GetMapping("/flux/tenmono")
+    public Mono<List<Integer>> listMono() {
+        return Flux.range(1, 10).collectList();
     }
 
     @GetMapping(path = "/stream", produces = MediaType.TEXT_EVENT_STREAM_VALUE)
